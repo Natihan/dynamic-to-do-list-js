@@ -66,3 +66,6 @@ li {
 .remove-btn:hover {
     background-color: #d9534f;
 }
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', () => {
+    // Select DOM elements
