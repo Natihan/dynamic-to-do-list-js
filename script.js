@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
             taskList.removeChild(li);
         };
 
+        // Add event listener for marking the task as completed
+        li.onclick = function() {
+            li.classList.toggle('completed');
+        };
+
         // Append the remove button to the list item
         li.appendChild(removeButton);
         // Append the list item to the task list
@@ -39,8 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Attach event listeners
+    // Event listener for the Add Task button
     addButton.addEventListener('click', addTask);
+
+    // Event listener for the Enter key in the input field
     taskInput.addEventListener('keypress', function(event) {
+        // Check if the key pressed is 'Enter'
         if (event.key === 'Enter') {
             addTask();
         }
