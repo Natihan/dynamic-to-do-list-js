@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
             taskList.removeChild(li);  // Remove the li from the task list
         };
 
+        // Assign an onclick event to the li for marking as completed
+        li.onclick = function() {
+            li.classList.toggle('completed'); // Toggle the completed class
+        };
+
         // Append the remove button to the li element
         li.appendChild(removeButton);
         // Append the li to taskList
