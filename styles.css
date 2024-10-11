@@ -66,6 +66,7 @@ li {
 .remove-btn:hover {
     background-color: #d9534f;
 }
-// Wait for the DOM to load
-document.addEventListener('DOMContentLoaded', () => {
-    // Select DOM elements
+.completed {
+    text-decoration: line-through;  /* Strike through the text */
+    color: gray;                    /* Change text color to gray */
+}
