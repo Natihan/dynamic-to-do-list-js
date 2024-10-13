@@ -1,3 +1,4 @@
+// Listen for the DOMContentLoaded event to ensure the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Select DOM Elements
     const addButton = document.getElementById('add-task-btn');
@@ -5,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskList = document.getElementById('task-list');
 
     // Function to add a task
-    const addTask = () => {
+    function addTask() {
         const taskText = taskInput.value.trim();
 
         // Check if the task input is empty
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear the input field
         taskInput.value = '';
-    };
+    }
 
     // Attach event listeners
     addButton.addEventListener('click', addTask);
