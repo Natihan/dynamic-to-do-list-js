@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const li = document.createElement('li');
         li.textContent = taskText;
 
+        // Optionally add a class for styling (e.g., for completed tasks)
+        li.classList.add('task-item'); // Add class to the list item
+
         // Create a remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
